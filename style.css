@@ -1,0 +1,113 @@
+@font-face{
+  font-family: 'minecraft';
+  src: url('minecraft.ttf')format('truetype');
+}
+@font-face{
+  font-family: 'games';
+  src: url('kid_games/Kid\ Games.ttf')format('truetype');
+}
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: url('imagens/minecraft-paisagem.jpg') no-repeat top center;
+    height: 98vh;
+    background-size: cover;
+    backdrop-filter: blur(2px);
+    color: black;
+    position: relative; 
+    background-size: 100% 100%; 
+    overflow: hidden;
+  }
+  
+  #startBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+  
+  #gameBoard {
+    display: grid;
+    grid-template-columns: repeat(6, 140px);
+    gap: 20px;
+    justify-content: center;
+  }
+  #timer{
+    font-family: 'minecraft',Helvetica, sans-serif;
+    color: white;
+  }
+  #conteiner{
+    position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -70%);
+  }
+  
+  #resultados{
+      display: block;
+      font-size: 30pt;
+      z-index: 1000;
+      font-family: 'minecraft',sans-serif;
+      color: #53800a;
+  }
+  #restartButton{
+    display: block;
+    width: 200px;
+    height: 40px;
+    background-color: #244758e3;
+    color: white;
+    font-family: 'minecraft', sans-serif;
+    border-radius: 95px;
+    border-color: #244758e3;
+    margin: 10px;
+  }
+  .card {
+    width: 140px;
+    height: 140px;
+    background-color: #244758;
+    color: white;
+    border-radius: 9px;
+    font-size: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    user-select: none;
+    transition: transform 0.6s ease, opacity 0.5s ease;
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
+  .card:hover{
+   transform: scale(1.05);
+  }
+  .card.revealed {
+    background-color: #53800a;
+  }
+  
+  .hidden {
+    display: none;
+  }
+
+  .matched{
+    transform: rotateY(180deg);
+    opacity: 0; 
+    transition: opacity 0.8s ease 0.6s; 
+    pointer-events: none; 
+  }
+  .matchesCount {
+    position: fixed; 
+    top: 10px;
+    right: 10px; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    width: 50px;
+    height: 40px;
+    background-color: #53800a94;
+    color: white;
+    border-radius: 5px;
+    font-weight: bold; 
+    font-family: 'minecraft', sans-serif;
+  }
+
+  
